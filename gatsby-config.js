@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
-    // START blog post plugins
+    // START posts 
     {
       options: {
         defaultLayouts: {
@@ -23,7 +23,19 @@ module.exports = {
       },
       resolve: "gatsby-source-filesystem",
     },
-    // END blog post plugins
+    // END posts
+    // START images
+    {
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+      resolve: "gatsby-source-filesystem",
+    },
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    // END images
   ],
   siteMetadata: {
     description: "A simple blog using Gatsby",
