@@ -1,16 +1,18 @@
-import * as React from "react"
+import "../styles/global.css"
+import { header, content } from "../styles/layout.module.css"
 
 import { graphql, Link, useStaticQuery } from "gatsby"
+import * as React from "react"
 
 import { SEO } from "./seo"
 
 interface LayoutProps {
   children: React.ReactNode
-  
-  description?: string,
-  image?: string,
-  path?: string,
-  title?: string,
+
+  description?: string
+  image?: string
+  path?: string
+  title?: string
 }
 
 const Layout = ({ children, title, description, image, path }: LayoutProps) => {
@@ -29,13 +31,13 @@ const Layout = ({ children, title, description, image, path }: LayoutProps) => {
   return (
     <>
       <SEO description={description} image={image} path={path} title={title} />
-      <header>
+      <header className={header}>
         <Link to="/">{siteMetadata.title}</Link>
         <nav>
           <Link to="/about">About</Link>
         </nav>
       </header>
-      <main>{children}</main>
+      <main className={content}>{children}</main>
     </>
   )
 }

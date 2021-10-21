@@ -6,8 +6,8 @@ import { Layout } from "../components/layout"
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <h1>Hello Gatsby</h1>
-      <Link to="/about">About this site</Link>
+      <h1>Home Page</h1>
+      <Link to="/about">Go to about page</Link>
     </Layout>
   )
 }
