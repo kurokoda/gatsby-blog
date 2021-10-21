@@ -1,9 +1,17 @@
 module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
-    // START posts 
+    // START posts
     {
       options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
         defaultLayouts: {
           posts: require.resolve("./src/components/postLayout.tsx"),
         },
@@ -16,6 +24,7 @@ module.exports = {
       },
       resolve: "gatsby-plugin-page-creator",
     },
+    "gatsby-remark-images",
     {
       options: {
         name: "posts",

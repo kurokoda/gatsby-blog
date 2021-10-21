@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <StaticImage
           alt="An adorable astronaut"
           height={500}
-          placeholder="dominantColor"
+          placeholder="blurred"
           src="../images/gatsby-astronaut.png"
           width={500}
         />
